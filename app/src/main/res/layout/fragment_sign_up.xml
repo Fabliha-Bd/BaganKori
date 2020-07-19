@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ui.profile.registration.view.SignUpFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:src="@drawable/banner"
+                android:scaleType="fitXY"/>
+            <ImageButton
+                android:id="@+id/btnCross"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:gravity="right"
+                android:background="@android:color/transparent"
+                android:padding="2dp"
+                android:layout_marginRight="20dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_close"
+                tools:ignore="MissingConstraints"
+                />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/etSignUpEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#50000000"
+            android:textColor="#000000"
+            android:textColorHint="#50000000"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+
+           />
+
+
+        <EditText
+            android:id="@+id/etSignUpFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:hint="FullName"
+            android:inputType="textPersonName"
+            android:backgroundTint="#50000000"
+            android:textColor="#000000"
+            android:textColorHint="#50000000"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="372dp" />
+
+        <EditText
+            android:id="@+id/etSignUpPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#50000000"
+            android:textColor="#000000"
+            android:textColorHint="#50000000"
+            android:ems="10"
+            android:hint="Password (Atleast 8 characters)"
+            android:inputType="textPassword"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="44dp"
+            tools:layout_editor_absoluteY="433dp" />
+
+        <EditText
+            android:id="@+id/etSignUpConfPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:backgroundTint="#50000000"
+            android:textColor="#000000"
+            android:textColorHint="#50000000"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="494dp" />
+        <ProgressBar
+            android:id="@+id/signUpProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:text="SignUp"
+            android:enabled="false"
+            android:textColor="#50FFFFFF"
+            android:textColorHighlight="@android:color/transparent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="549dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:text="Or"
+            android:backgroundTint="#50000000"
+            android:textColor="#50000000"
+            android:textColorHint="#50000000"
+           />
+
+        <TextView
+            android:id="@+id/tvAlreadyHaveAnAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Already have an account? SignIn"
+            android:backgroundTint="#50000000"
+            android:textColor="#000000"
+            android:textColorHint="#50000000"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="87dp"
+            tools:layout_editor_absoluteY="652dp" />
+
+
+    </LinearLayout>
+
+</FrameLayout>
