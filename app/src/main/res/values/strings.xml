@@ -11,6 +11,13 @@
     <string name="menu_shop">Shop</string>
     <string name="menu_slideshow">Cart</string>
     <string name="menu_profile">Profile</string>
+    <string name="menu_offers">Offers</string>
+
+
+    <string name="menu_redeem">Redeem</string>
+    <string name="menu_faq">FAQ</string>
+    <string name="menu_aboutus">About Us</string>
+    <string name="menu_support">Support</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

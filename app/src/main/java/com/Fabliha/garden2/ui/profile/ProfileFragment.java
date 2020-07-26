@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.Fabliha.garden2.R;
+import com.Fabliha.garden2.ui.cart.CartFragment;
 import com.Fabliha.garden2.ui.profile.registration.view.RegisterActivity;
 import com.Fabliha.garden2.ui.profile.registration.view.SignInFragment;
 import com.Fabliha.garden2.ui.profile.registration.view.SignUpFragment;
@@ -35,6 +36,10 @@ public class ProfileFragment extends Fragment {
     Button btnProfileSignUp;
     LinearLayout linearLayout;
 
+    public static ProfileFragment newInstance(int index) {
+        ProfileFragment fragment = new ProfileFragment();
+        return fragment;
+    }
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         profileViewModel =

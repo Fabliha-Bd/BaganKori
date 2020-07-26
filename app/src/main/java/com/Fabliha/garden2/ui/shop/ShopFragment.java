@@ -17,6 +17,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.Fabliha.garden2.R;
+import com.Fabliha.garden2.ui.cart.CartFragment;
 import com.Fabliha.garden2.ui.shop.seeds.view.SeedsActivity;
 import com.Fabliha.garden2.ui.shop.seeds.view.SeedsFragment;
 
@@ -25,6 +26,12 @@ public class ShopFragment extends Fragment {
     ShopViewModel shopViewModel;
     private ImageButton btn_seed;
     private ScrollView scrollView;
+
+
+    public static ShopFragment newInstance(int index) {
+        ShopFragment fragment = new ShopFragment();
+        return fragment;
+    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

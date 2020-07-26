@@ -22,6 +22,11 @@ public class CartFragment extends Fragment {
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
 
+    public static CartFragment newInstance(int index) {
+        CartFragment fragment = new CartFragment();
+        return fragment;
+    }
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         slideshowViewModel =
