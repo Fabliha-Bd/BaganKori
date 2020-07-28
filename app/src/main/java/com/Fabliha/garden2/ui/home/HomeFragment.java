@@ -40,7 +40,7 @@ public class HomeFragment extends Fragment {
     private DatabaseReference mDatabaseRefCart;
     private FirebaseAuth firebaseAuth;
     private List<Upload> mUploads;
-   // private ProgressBar mProgressCircle;
+    private ProgressBar mProgressCircle;
 
 
     public static HomeFragment newInstance(int index) {
@@ -62,7 +62,7 @@ public class HomeFragment extends Fragment {
         });
         recyclerView= root.findViewById(R.id.homerv);
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
-       // mProgressCircle = root.findViewById(R.id.progress_circle);
+        mProgressCircle = root.findViewById(R.id.progress_circle);
         mUploads = new ArrayList<>();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("seeds/");
         mDatabaseRef.addValueEventListener(new ValueEventListener() {
@@ -74,13 +74,13 @@ public class HomeFragment extends Fragment {
                 }
                 mAdapter = new HomeImageAdapter(getActivity(), mUploads);
                 recyclerView.setAdapter(mAdapter);
-               // mProgressCircle.setVisibility(View.INVISIBLE);
+                mProgressCircle.setVisibility(View.INVISIBLE);
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 Toast.makeText(getActivity(), databaseError.getMessage(), Toast.LENGTH_SHORT).show();
-                //mProgressCircle.setVisibility(View.INVISIBLE);
+                mProgressCircle.setVisibility(View.INVISIBLE);
             }
         });
 
