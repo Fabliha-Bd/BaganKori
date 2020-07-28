@@ -6,11 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
@@ -25,6 +27,7 @@ public class ShopFragment extends Fragment {
 
     ShopViewModel shopViewModel;
     private ImageButton btn_seed;
+    private CardView i2;
     private ScrollView scrollView;
 
 
@@ -38,8 +41,9 @@ public class ShopFragment extends Fragment {
         shopViewModel =
                 ViewModelProviders.of(this).get(ShopViewModel.class);
 
-        View root = inflater.inflate(R.layout.fragment_shop, container, false);
+        View root = inflater.inflate(R.layout.fragment_shop3, container, false);
         scrollView= root.findViewById(R.id.scrollView);
+
         btn_seed = (ImageButton) root.findViewById(R.id.imageButton);
         btn_seed.setOnClickListener(new View.OnClickListener() {
             @Override
