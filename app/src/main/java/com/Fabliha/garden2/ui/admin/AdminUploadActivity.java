@@ -43,12 +43,15 @@ public class AdminUploadActivity extends AppCompatActivity {
     private TextView mTextViewShowUploads;
     private EditText mEditTextFileName;
     private EditText mEditTextFilePrice;
+    private EditText mEditTextFileType;
+    private EditText mEditTextFileQuantity;
     private ImageView mImageView;
     private ProgressBar mProgressBar;
     private Uri mImageUri;
     private StorageReference mStorageRef;
     private DatabaseReference mDatabaseRef;
     private StorageTask mUploadTask;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +61,8 @@ public class AdminUploadActivity extends AppCompatActivity {
         mTextViewShowUploads = findViewById(R.id.text_view_show_uploads);
         mEditTextFileName = findViewById(R.id.edit_text_file_name);
         mEditTextFilePrice= findViewById(R.id.edit_text_file_price);
+        mEditTextFileType= findViewById(R.id.edit_text_file_type);
+        mEditTextFileQuantity= findViewById(R.id.edit_text_file_quantity);
         mImageView = findViewById(R.id.image_view);
         mProgressBar = findViewById(R.id.progress_bar);
         mStorageRef = FirebaseStorage.getInstance().getReference("seeds");
@@ -120,13 +125,16 @@ public class AdminUploadActivity extends AppCompatActivity {
                                     mProgressBar.setProgress(0);
                                 }
                             }, 500);
+                            String type="NO";
                             Toast.makeText(AdminUploadActivity.this, "Upload successful", Toast.LENGTH_LONG).show();
                             fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
                                 public void onSuccess(Uri uri) {
                                     Upload upload = new Upload(mEditTextFileName.getText().toString().trim(),
                                             mEditTextFilePrice.getText().toString().trim(),
-                                            uri.toString());
+                                            uri.toString(),
+                                            mEditTextFileType.getText().toString().trim(),
+                                            Long.parseLong(mEditTextFileQuantity.getText().toString()));
                                     String uploadId = mDatabaseRef.push().getKey();
                                     mDatabaseRef.child(uploadId).setValue(upload);
                                 }

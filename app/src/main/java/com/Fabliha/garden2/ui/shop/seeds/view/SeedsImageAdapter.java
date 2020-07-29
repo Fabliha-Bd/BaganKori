@@ -58,11 +58,11 @@ public class SeedsImageAdapter extends RecyclerView.Adapter<SeedsImageAdapter.Im
 
                 if (cartMap.containsKey(key)) {
                     cartMap.put(key,
-                            new CartItem(uploadCurrent.getName(), Integer.parseInt(uploadCurrent.getmPrice()), uploadCurrent.getmType()
+                            new CartItem(uploadCurrent.getName(), Integer.parseInt(uploadCurrent.getmPrice()), uploadCurrent.getType()
                                     , cartMap.get(key).getQuantity() + 1));
                 } else {
                     cartMap.put(key,
-                            new CartItem(uploadCurrent.getName(), Integer.parseInt(uploadCurrent.getmPrice()), uploadCurrent.getmType()
+                            new CartItem(uploadCurrent.getName(), Integer.parseInt(uploadCurrent.getmPrice()), uploadCurrent.getType()
                                     , 1));
                 }
 
