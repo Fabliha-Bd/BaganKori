@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.Fabliha.garden2">
+    package="com.Fabliha.BaganKori">
     <uses-permission android:name="android.permission.INTERNET" />
 
 
@@ -11,10 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.admin.AdminUploadActivity"></activity>
-        <activity android:name=".ui.shop.seeds.view.SeedsActivity" />
+        <activity android:name="com.Fabliha.BaganKori.admin.AdminUploadActivity"></activity>
+        <activity android:name="com.Fabliha.BaganKori.other.view.SeedsActivity" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name="com.Fabliha.BaganKori.SplashScreenActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.Fabliha.BaganKori.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>

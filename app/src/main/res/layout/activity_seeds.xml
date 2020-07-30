@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.shop.seeds.view.SeedsActivity">
+    tools:context=".other.view.SeedsActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnGoToCart"

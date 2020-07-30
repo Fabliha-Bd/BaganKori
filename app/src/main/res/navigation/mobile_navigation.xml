@@ -7,57 +7,57 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.Fabliha.garden2.ui.home.HomeFragment"
+        android:name="com.Fabliha.BaganKori.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.Fabliha.garden2.ui.shop.ShopFragment"
+        android:name="com.Fabliha.BaganKori.shop.view.ShopFragment"
         android:label="@string/menu_shop"
         tools:layout="@layout/fragment_shop" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.Fabliha.garden2.ui.cart.CartFragment"
+        android:name="com.Fabliha.BaganKori.cart.CartFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 
 
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.Fabliha.garden2.ui.profile.ProfileFragment"
+        android:name="com.Fabliha.BaganKori.profile.ProfileFragment"
         android:label="@string/menu_profile"
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/nav_offers"
-        android:name="com.Fabliha.garden2.ui.drawer.OffersFragment"
+        android:name="com.Fabliha.BaganKori.drawer.OffersFragment"
         android:label="@string/menu_offers"
         tools:layout="@layout/fragment_offers" />
 
     <fragment
         android:id="@+id/nav_redeem"
-        android:name="com.Fabliha.garden2.ui.drawer.RedeemFragment"
+        android:name="com.Fabliha.BaganKori.drawer.RedeemFragment"
         android:label="@string/menu_redeem"
         tools:layout="@layout/fragment_redeem" />
 
     <fragment
         android:id="@+id/nav_faq"
-        android:name="com.Fabliha.garden2.ui.drawer.FAQFragment"
+        android:name="com.Fabliha.BaganKori.drawer.FAQFragment"
         android:label="@string/menu_faq"
         tools:layout="@layout/fragment_f_a_q" />
 
 
     <fragment
         android:id="@+id/nav_aboutus"
-        android:name="com.Fabliha.garden2.ui.drawer.AboutUsFragment"
+        android:name="com.Fabliha.BaganKori.drawer.AboutUsFragment"
         android:label="@string/menu_aboutus"
         tools:layout="@layout/fragment_about_us" />
 
 
     <fragment
         android:id="@+id/nav_support"
-        android:name="com.Fabliha.garden2.ui.drawer.SupportFragment"
+        android:name="com.Fabliha.BaganKori.drawer.SupportFragment"
         android:label="@string/menu_support"
         tools:layout="@layout/fragment_support" />
 </navigation>
