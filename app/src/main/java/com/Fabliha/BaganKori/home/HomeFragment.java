@@ -58,6 +58,7 @@ public class HomeFragment extends Fragment {
         });
         recyclerView= root.findViewById(R.id.homerv);
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.setNestedScrollingEnabled(false);
         mProgressCircle = root.findViewById(R.id.progress_circle);
         mUploads = new ArrayList<>();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("seeds/");

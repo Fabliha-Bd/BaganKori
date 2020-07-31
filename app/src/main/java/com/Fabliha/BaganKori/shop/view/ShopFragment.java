@@ -190,7 +190,7 @@ public class ShopFragment extends Fragment {
     }
 
     public void showProducts(String ptype) {
-        mUploads.clear();
+       // mUploads.clear();
         mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
