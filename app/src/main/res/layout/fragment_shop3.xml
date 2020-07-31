@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    tools:context=".shop.view.ShopFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="Categories"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:requiresFadingEdge="vertical">
+
+                    <!-- Column 1 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            app:cardCornerRadius="50dp"
+                            app:cardElevation="10dp">
+
+                            <ImageButton
+                                android:id="@+id/btn_bansai"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="#FFFFFF"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/bansaitrans" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Bansai"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                    <!--column2-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            app:cardCornerRadius="50dp"
+                            app:cardElevation="10dp">
+
+                            <ImageButton
+                                android:id="@+id/btn_decoPlants"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="#FFFFFF"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/decorativetrans" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Decorative Plants"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <!--3-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            app:cardCornerRadius="50dp"
+                            app:cardElevation="10dp">
+
+                            <ImageButton
+                                android:id="@+id/btn_flowerPlants"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="#FFFFFF"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/flower4" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Flower Plants"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                    <!--4-->
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            app:cardCornerRadius="50dp"
+                            app:cardElevation="10dp">
+
+                            <ImageButton
+                                android:id="@+id/btn_fruitPlants"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="#FFFFFF"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/dragontrans" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Fruit Plants"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <!--5-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            app:cardCornerRadius="50dp"
+                            app:cardElevation="10dp">
+
+                            <ImageButton
+                                android:id="@+id/btn_pots"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="#FFFFFF"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/pots1" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Pots"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                    <!--6-->
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            app:cardCornerRadius="50dp"
+                            app:cardElevation="10dp">
+
+                            <ImageButton
+                                android:id="@+id/btn_seeds"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="#FFFFFF"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/sunflowerseeds" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Seeds"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                    <!--7-->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            app:cardCornerRadius="50dp"
+                            app:cardElevation="10dp">
+
+                            <ImageButton
+                                android:id="@+id/btn_soil"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="#FFFFFF"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/btn_soil" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Soil and Fertilizers"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                    <!--8-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            app:cardCornerRadius="50dp"
+                            app:cardElevation="10dp">
+
+                            <ImageButton
+                                android:id="@+id/btn_tools"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="#FFFFFF"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/tools" />
+                        </androidx.cardview.widget.CardView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Tools"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                    <!--9-->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            app:cardCornerRadius="50dp"
+                            app:cardElevation="10dp">
+
+                            <ImageButton
+                                android:id="@+id/btn_others"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="#FFFFFF"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/vegetable" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Others"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvSelectedCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Bansai"
+                android:textSize="20dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/progress_circle"
+                    style="@android:style/Widget.ProgressBar.Inverse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="250dp"
+                    android:indeterminate="true"
+                    tools:ignore="MissingConstraints" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
