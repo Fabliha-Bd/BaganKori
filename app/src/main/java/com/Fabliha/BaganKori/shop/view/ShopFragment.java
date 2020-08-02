@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -24,6 +25,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.Fabliha.BaganKori.R;
 import com.Fabliha.BaganKori.home.HomeImageAdapter;
+import com.Fabliha.BaganKori.shop.view.ProductImageAdapter;
 import com.Fabliha.BaganKori.shop.model.Upload;
 import com.Fabliha.BaganKori.other.view.SeedsActivity;
 import com.Fabliha.BaganKori.shop.viewmodel.ShopViewModel;
@@ -39,6 +41,7 @@ import java.util.List;
 
 public class ShopFragment extends Fragment {
 
+    LinearLayout linearLayout;
     ShopViewModel shopViewModel;
     //  ProductType productType;
     private ImageButton btn_bansai;
@@ -55,7 +58,7 @@ public class ShopFragment extends Fragment {
     private CardView i2;
     private ScrollView scrollView;
     private RecyclerView mRecyclerView;
-    private HomeImageAdapter mAdapter;
+    private ProductImageAdapter mAdapter;
     private ProgressBar mProgressCircle;
     private DatabaseReference mDatabaseRef;
     private DatabaseReference mDatabaseRefCart;
@@ -83,6 +86,7 @@ public class ShopFragment extends Fragment {
                 //setFragment(new SeedsFragment());
             }
         });
+        linearLayout= root.findViewById(R.id.linearLayoutShop);
         btn_bansai = (ImageButton) root.findViewById(R.id.btn_bansai);
         btn_decoPlants = (ImageButton) root.findViewById(R.id.btn_decoPlants);
         btn_flowerPlants = (ImageButton) root.findViewById(R.id.btn_flowerPlants);
@@ -204,7 +208,7 @@ public class ShopFragment extends Fragment {
                         mUploads.add(upload);
                     }
                 }
-                mAdapter = new HomeImageAdapter(getActivity(), mUploads);
+                mAdapter = new ProductImageAdapter(getActivity(), mUploads);
                 mRecyclerView.setAdapter(mAdapter);
                 mProgressCircle.setVisibility(View.INVISIBLE);
             }
@@ -221,7 +225,7 @@ public class ShopFragment extends Fragment {
     private void setFragment(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
         fragmentTransaction.setCustomAnimations(R.anim.slide_from_left, R.anim.slideout_from_right);
-        fragmentTransaction.replace(scrollView.getId(), fragment);
+        fragmentTransaction.replace(linearLayout.getId(), fragment);
         fragmentTransaction.commit();
     }
 }

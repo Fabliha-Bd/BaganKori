@@ -1,6 +1,7 @@
 package com.Fabliha.BaganKori.shop.model;
 
 public class Upload {
+
     private String mName;
     private String mImageUrl;
     private String mPrice;
@@ -12,14 +13,6 @@ public class Upload {
         //empty constructor needed
     }
 
-    /*public Upload(String name, String price, String imageUrl) {
-        if (name.trim().equals("")) {
-            name = "No Name";
-        }
-        mName = name;
-        mPrice= price;
-        mImageUrl = imageUrl;
-    }*/
     public Upload(String name, String price, String imageUrl, String type, Long quantity) {
         if (name.trim().equals("")) {
             name = "No Name";

@@ -15,6 +15,7 @@
         tools:ignore="MissingConstraints"
         style="@android:style/Widget.ProgressBar.Inverse"
         android:indeterminate="true"
+        android:visibility="invisible"
        />
 
     <androidx.recyclerview.widget.RecyclerView

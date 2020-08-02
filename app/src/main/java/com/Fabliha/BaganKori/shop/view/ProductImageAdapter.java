@@ -1,4 +1,4 @@
-package com.Fabliha.BaganKori.home;
+package com.Fabliha.BaganKori.shop.view;
 
 import android.content.Context;
 import android.util.Log;
@@ -12,36 +12,37 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.Fabliha.BaganKori.R;
-import com.Fabliha.BaganKori.retrofit.ResponseItem;
+import com.Fabliha.BaganKori.shop.model.Upload;
 import com.bumptech.glide.Glide;
 import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.util.List;
 
-public class HomeImageAdapter extends  RecyclerView.Adapter<HomeImageAdapter.HomeViewHolder>{
+public class ProductImageAdapter extends  RecyclerView.Adapter<ProductImageAdapter.ProductViewHolder>{
 
     private Context mContext;
-    private List<ResponseItem> mUploads;
+    private List<Upload> mUploads;
 
 
-    public HomeImageAdapter(Context mContext, List<ResponseItem> mUploads) {
+    public ProductImageAdapter(Context mContext, List<Upload> mUploads) {
         this.mContext = mContext;
         this.mUploads = mUploads;
     }
 
     @NonNull
     @Override
-    public HomeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(mContext).inflate(R.layout.home_item, parent, false);
-        return new HomeViewHolder(v);
+        return new ProductViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HomeViewHolder holder, int position) {
-        final ResponseItem uploadCurrent = mUploads.get(position);
+    public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
+        final Upload uploadCurrent = mUploads.get(position);
 
         holder.tvName.setText(uploadCurrent.getName());
-        holder.tvPrice.setText("BDT "+uploadCurrent.getMPrice());
+        //   holder.tvPrice.setText("BDT "+uploadCurrent.getmPrice());
+        holder.tvPrice.setText("BDT "+uploadCurrent.getmPrice());
 
         Glide.with(mContext)
                 .load(uploadCurrent.getImageUrl())
@@ -63,12 +64,12 @@ public class HomeImageAdapter extends  RecyclerView.Adapter<HomeImageAdapter.Hom
         return mUploads.size();
     }
 
-    class HomeViewHolder extends RecyclerView.ViewHolder{
+    class ProductViewHolder extends RecyclerView.ViewHolder{
         ImageButton btn_add;
         RoundedImageView roundedImageView;
         TextView tvName;
         TextView tvPrice;
-        public HomeViewHolder(@NonNull View itemView) {
+        public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
             roundedImageView= itemView.findViewById(R.id.homecard);
             btn_add= itemView.findViewById(R.id.btn_add);

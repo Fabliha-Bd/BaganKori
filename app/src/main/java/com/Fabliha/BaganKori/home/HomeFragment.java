@@ -1,11 +1,11 @@
 package com.Fabliha.BaganKori.home;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,17 +15,20 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import com.Fabliha.BaganKori.retrofit.ApiResponse;
+import com.Fabliha.BaganKori.retrofit.IJsonPlaceHolderAPI;
 import com.Fabliha.BaganKori.R;
-import com.Fabliha.BaganKori.shop.model.Upload;
+import com.Fabliha.BaganKori.retrofit.ResponseItem;
+import com.Fabliha.BaganKori.retrofit.RetrofitClientInstance;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HomeFragment extends Fragment {
 
@@ -35,7 +38,7 @@ public class HomeFragment extends Fragment {
     private DatabaseReference mDatabaseRef;
     private DatabaseReference mDatabaseRefCart;
     private FirebaseAuth firebaseAuth;
-    private List<Upload> mUploads;
+    private List<ResponseItem> mUploads;
     private ProgressBar mProgressCircle;
 
 
@@ -59,8 +62,9 @@ public class HomeFragment extends Fragment {
         recyclerView= root.findViewById(R.id.homerv);
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
         recyclerView.setNestedScrollingEnabled(false);
-        mProgressCircle = root.findViewById(R.id.progress_circle);
+     //   mProgressCircle = root.findViewById(R.id.progress_circle);
         mUploads = new ArrayList<>();
+        /*
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("seeds/");
         mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -79,9 +83,39 @@ public class HomeFragment extends Fragment {
                 Toast.makeText(getActivity(), databaseError.getMessage(), Toast.LENGTH_SHORT).show();
                 mProgressCircle.setVisibility(View.INVISIBLE);
             }
+        }); */
+
+        IJsonPlaceHolderAPI jsonPlaceHolderAPI = RetrofitClientInstance.getRetrofitInstance().create(IJsonPlaceHolderAPI.class);
+        Call<ApiResponse> call= jsonPlaceHolderAPI.getProducts("bW23cGaq");
+        call.enqueue(new Callback <ApiResponse>() {
+
+            @Override
+            public void onResponse(Call<ApiResponse> call, Response <ApiResponse> response) {
+                Log.d("Home",response.body().toString());
+
+                if(!response.isSuccessful())
+                {
+
+                    Log.d("Home","Error: "+ response.message());
+                    return;
+                }
+
+                mUploads= response.body().getResponse();
+                Log.d("Home","respnse body: "+ mUploads.toString());
+                mAdapter = new HomeImageAdapter(getActivity(), mUploads);
+                recyclerView.setAdapter(mAdapter);
+             //   mProgressCircle.setVisibility(View.INVISIBLE);
+
+            }
+
+            @Override
+            public void onFailure(Call<ApiResponse> call, Throwable t) {
+
+                Log.d("Home","Error: Failure "+ t.getMessage());
+                t.printStackTrace();
+
+            }
         });
-
-
 
 
         return root;
