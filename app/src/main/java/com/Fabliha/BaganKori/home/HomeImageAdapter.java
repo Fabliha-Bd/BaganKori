@@ -39,7 +39,9 @@ public class HomeImageAdapter extends  RecyclerView.Adapter<HomeImageAdapter.Hom
     @Override
     public void onBindViewHolder(@NonNull HomeViewHolder holder, int position) {
         final ResponseItem uploadCurrent = mUploads.get(position);
-
+        Log.d("Home","ImageUrl "+uploadCurrent.getImageUrl());
+        Log.d("Home","Name "+uploadCurrent.getName());
+        Log.d("Home","Price "+uploadCurrent.getMPrice());
         holder.tvName.setText(uploadCurrent.getName());
         holder.tvPrice.setText("BDT "+uploadCurrent.getMPrice());
 
@@ -52,7 +54,7 @@ public class HomeImageAdapter extends  RecyclerView.Adapter<HomeImageAdapter.Hom
         holder.btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("Product","Button Click "+position);
+                Log.d("Home","Button Click "+position);
 
             }
         });

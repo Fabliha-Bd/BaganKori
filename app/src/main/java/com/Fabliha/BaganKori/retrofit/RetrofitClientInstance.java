@@ -16,7 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClientInstance {
 
     private static Retrofit retrofit;
-    private static final String BASE_URL = "https://pastebin.com/";
+    private static final String BASE_URL = "https://pastebin.com/raw/";
 
     public static Retrofit getRetrofitInstance() {
         Gson gson = new GsonBuilder()

@@ -129,7 +129,7 @@ public class AdminUploadActivity extends AppCompatActivity {
                             fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
                                 public void onSuccess(Uri uri) {
-                                    Upload upload = new Upload(mEditTextFileName.getText().toString().trim(),
+                                   Upload upload = new Upload(mEditTextFileName.getText().toString().trim(),
                                             mEditTextFilePrice.getText().toString().trim(),
                                             uri.toString(),
                                             mEditTextFileType.getText().toString().trim(),
